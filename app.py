@@ -184,9 +184,12 @@ if st.session_state.results is not None:
 
     csv = results_df.to_csv(index=False).encode("utf-8")
 
+    # Format model name for file naming
+    safe_model_name = model_name.lower().replace(" ", "_")
+
     st.download_button(
-        label="⬇️ Download Predictions as CSV",
+        label=f"⬇️ Download Predictions using {model_name}",
         data=csv,
-        file_name="predicted_results.csv",
+        file_name=f"predicted_results_{safe_model_name}.csv",
         mime="text/csv",
     )
