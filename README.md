@@ -114,10 +114,10 @@ student-depression-ml-app/
 ├── requirements.txt
 ├── README.md
 └── models/
-    ├── logistic.pkl
     ├── StudentDepression_training.ipynb
     ├── decision_tree.pkl
     ├── knn.pkl
+    ├── logistic.pkl
     ├── naive_bayes.pkl
     ├── random_forest.pkl
     └── xgboost.pkl
