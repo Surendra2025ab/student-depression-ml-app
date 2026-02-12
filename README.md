@@ -89,11 +89,12 @@ The deployed Streamlit app allows users to:
 - Select a machine learning model  
 - View evaluation metrics  
 - View confusion matrix  
-- View classification report  
+- View classification report
+- Download predicted results on uploaded test dataset (CSV file)  
 
 ---
 
-## Required Libraries
+## Requirements
 
 - Python  
 - Scikit-learn  
@@ -134,8 +135,6 @@ This project demonstrates a complete end-to-end Machine Learning workflow:
 - Model comparison  
 - Performance evaluation  
 - Deployment using Streamlit Community Cloud  
-
-Ensemble models such as **Random Forest** and **XGBoost** generally provide improved predictive performance due to their ability to capture complex patterns and reduce overfitting.
 
 ---
 
