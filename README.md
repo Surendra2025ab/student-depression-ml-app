@@ -80,6 +80,19 @@ The models were evaluated using:
 
 ---
 
+## Observations on Model Performance
+
+| ML Model Name | Observation about Model Performance |
+|---------------|--------------------------------------|
+| **Logistic Regression** | Achieved the highest overall performance (Accuracy: 84.50%, AUC: 0.9181). Maintained strong balance between precision and recall, resulting in the highest MCC (0.6787). Indicates that the dataset is largely linearly separable. |
+| **Decision Tree** | Moderate performance (Accuracy: 77.24%, AUC: 0.7660). Balanced precision and recall but lower MCC (0.5315) suggests weaker generalization. Likely affected by high variance typical of single-tree models. |
+| **k-Nearest Neighbors (kNN)** | Lowest accuracy (72.83%) among all models. Higher recall but lower precision indicates more false positives. Lowest MCC (0.4300) suggests reduced stability in classification performance. |
+| **Naive Bayes** | Good recall (0.8923) indicating strong ability to detect positive cases. Moderate accuracy (79.23%) and MCC (0.5679). Performance may be limited by the independence assumption between features. |
+| **Random Forest (Ensemble)** | Strong ensemble performance (Accuracy: 84.19%, AUC: 0.9133). Balanced precision and recall with high MCC (0.6725). Reduced variance compared to Decision Tree and handled nonlinear patterns effectively. |
+| **XGBoost (Ensemble)** | High performance (Accuracy: 83.67%, AUC: 0.9092). Balanced metrics with strong F1 score and MCC (0.6620). Effectively captured complex relationships, slightly below Logistic Regression and Random Forest. |
+
+---
+
 ## Streamlit Application Features
 
 The deployed Streamlit app allows users to:
