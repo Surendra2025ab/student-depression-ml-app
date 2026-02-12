@@ -1,1 +1,1 @@
-🎓 Student Depression Prediction using Machine Learning
+# 🎓 Student Depression Prediction using Machine Learning
