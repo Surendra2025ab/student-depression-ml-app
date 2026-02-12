@@ -110,6 +110,31 @@ if uploaded_file is not None and run_button:
         y_prob = model.predict_proba(X_test)[:, 1]
 
         # =====================
+        # Create Downloadable Prediction File
+        # =====================
+
+        st.markdown("### 📥 Download Prediction Results")
+
+        # Create copy of original uploaded data
+        results_df = data.copy()
+
+        # Add prediction columns
+        results_df["Predicted_Depression"] = y_pred
+        results_df["Prediction_Probability"] = y_prob
+
+        # Convert dataframe to CSV format
+        csv = results_df.to_csv(index=False).encode("utf-8")
+
+        st.download_button(
+            label="⬇️ Download Predictions as CSV",
+            data=csv,
+            file_name="predicted_results.csv",
+            mime="text/csv",
+        )
+
+        st.markdown("---")
+
+        # =====================
         # Show Selected Algorithm Name
         # =====================
 
@@ -157,4 +182,5 @@ if uploaded_file is not None and run_button:
         st.text(classification_report(y_test, y_pred))
 
 elif run_button and uploaded_file is None:
+
     st.warning("Please upload a test dataset first.")
